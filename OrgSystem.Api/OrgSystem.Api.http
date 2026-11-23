@@ -1,0 +1,6 @@
+@OrgSystem.Api_HostAddress = http://localhost:5216
+
+GET {{OrgSystem.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

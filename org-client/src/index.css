@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;1,800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --nav-bg: #1e2225;
+  --hero-bg: #262b2f;
+  --page-bg: #f3f4f6;
+  --card-bg: #ffffff;
+  --border: #e2e5e9;
+  --text-dark: #1f2326;
+  --text-muted: #646b73;
+  --lime: #b5d62e;
+  --lime-hover: #a2c221;
+  --pitch-green: #2e8b3c;
+  --danger: #dc2626;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--page-bg);
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
+/* ÜST NAVBAR */
+.shs-navbar {
+  background-color: var(--nav-bg);
+  color: #fff;
+  border-bottom: 1px solid #2e3338;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.shs-nav-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.shs-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.shs-logo-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--lime);
+  color: #1e2225;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.shs-brand-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  line-height: 1;
+}
+
+.shs-brand-sub {
+  font-size: 0.7rem;
+  color: var(--lime);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.shs-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.shs-nav-link {
+  background: transparent;
+  border: none;
+  color: #d1d5db;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.45rem 0.85rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: color 0.15s, background 0.15s;
+}
+
+.shs-nav-link:hover,
+.shs-nav-link.active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.shs-outline-btn {
+  background: transparent;
+  border: 1.5px solid var(--lime);
+  color: var(--lime);
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.shs-outline-btn:hover {
+  background: var(--lime);
+  color: #1e2225;
+}
+
+/* HERO BANNER */
+.shs-hero {
+  background: linear-gradient(110deg, #1b2023 0%, #262e29 55%, #1f2a22 100%);
+  color: #fff;
+  padding: 2.25rem 1.5rem;
+  border-bottom: 3px solid var(--lime);
+}
+
+.shs-hero-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.shs-hero-tag {
+  display: inline-block;
+  background: var(--lime);
+  color: #1e2225;
+  font-weight: 800;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.shs-hero-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-style: italic;
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.shs-hero-title span {
+  color: var(--lime);
+}
+
+.shs-hero-desc {
+  color: #cbd5e1;
+  font-size: 0.92rem;
+  margin-top: 0.45rem;
+  max-width: 540px;
+}
+
+/* ANA KONTEYNER VE İKİ KOLONLU YAPI */
+.shs-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 1.75rem 1.5rem 3rem;
+}
+
+.shs-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .shs-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.shs-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.35rem;
+  margin-bottom: 1.35rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.shs-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.shs-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.shs-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--lime);
+  display: inline-block;
+}
+
+/* SAHA KARTLARI */
+.pitch-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.pitch-card {
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  padding: 0.95rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  background: #fafafa;
+}
+
+.pitch-card:hover {
+  border-color: #9ca3af;
+}
+
+.pitch-card.active {
+  border-color: var(--pitch-green);
+  background: #f0fdf4;
+}
+
+.pitch-price {
+  font-weight: 700;
+  color: var(--pitch-green);
+  font-size: 1rem;
+  margin-top: 0.4rem;
+}
+
+/* SAAT SLOTLARI */
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+}
+
+.slot-btn {
+  padding: 0.65rem 0.5rem;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text-dark);
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.12s;
+}
+
+.slot-btn.available:hover {
+  border-color: var(--pitch-green);
+  background: #f0fdf4;
+}
+
+.slot-btn.selected {
+  background: var(--pitch-green);
+  border-color: var(--pitch-green);
+  color: #fff;
+}
+
+.slot-btn.booked {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #b91c1c;
+  cursor: not-allowed;
+}
+
+/* FORM ELEMANLARI */
+label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.3rem;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  color: var(--text-dark);
+  font-size: 0.92rem;
+  margin-bottom: 0.9rem;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--pitch-green);
+}
+
+.btn-primary {
+  background: var(--lime);
+  color: #1e2225;
+  border: none;
+  padding: 0.68rem 1.15rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-primary:hover {
+  background: var(--lime-hover);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-dark {
+  background: var(--nav-bg);
+  color: #fff;
+  border: none;
+  padding: 0.55rem 0.95rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.btn-danger-sm {
+  background: #fee2e2;
+  color: var(--danger);
+  border: 1px solid #fecaca;
+  padding: 0.32rem 0.65rem;
+  border-radius: 5px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-danger-sm:hover {
+  background: var(--danger);
+  color: #fff;
+}
+
+/* TABLO VE ETİKETLER */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 0.65rem 0.6rem;
+  border-bottom: 2px solid var(--border);
+}
+
+td {
+  padding: 0.75rem 0.6rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.88rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge-ok {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge-cancel {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.alert-error {
+  background: #fef2f2;
+  border-left: 4px solid var(--danger);
+  color: #991b1b;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.alert-success {
+  background: #f0fdf4;
+  border-left: 4px solid var(--pitch-green);
+  color: #166534;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.badge-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.btn-approve-sm {
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+  padding: 0.32rem 0.65rem;
+  border-radius: 5px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 0.4rem;
+}
+
+.btn-approve-sm:hover {
+  background: #16a34a;
+  color: #fff;
+}
+
+.slot-btn.past {
+  background: #f1f5f9;
+  border-color: #e2e8f0;
+  color: #94a3b8;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
